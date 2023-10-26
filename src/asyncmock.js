@@ -1,0 +1,5 @@
+export const talleres = [
+    { id: 1, nombre: "Taller básico: PRESUPUESTOS", fecha: "Comienza en Enero 2024", descripcion: "El Taller consta de 8 encuentros online los días Miércoles y Viernes de 18:00hs a 19:30hs. Aprenderemos a realizar el presupuesto para una vivienda pequeña, aplicando funciones de Excel y logrando que el archivo sirva como una plantilla para otros proyectos. Comenzamos desde cero con la estructura del programa, aprendemos a usar tablas, gráficos, diseño de páginas y presentamos el archivo listo para imprimir o exportar.", stock: 5, img: "../img/taller-basico-presupuestos.jpg" },
+    { id: 2, nombre: "Taller intermedio: PLANIFICACIÓN DE OBRA", fecha: "Comienza en Marzo 2024", descripcion: "El Taller se encuentra en construcción.", stock: 5, img: "../img/taller-intermedio-planificacion.jpg" },
+    { id: 3, nombre: "Taller avanzado: EVALUACIÓN Y CONTROL DE OBRA", fecha: "Comienza en Julio 2024", descripcion: "El Taller se encuentra en construcción.", stock: 5, img: "../img/taller-avanzado-evaluacion.jpg" }
+]

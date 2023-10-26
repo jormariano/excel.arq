@@ -1,0 +1,54 @@
+.taller-excel {
+    background-image: url("../img/fondo-taller.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    margin-top: 20px;
+    width: auto;
+    height: 500px;
+    filter: sepia(30%);
+}
+
+.taller-excel h2,
+.taller-excel h3,
+.taller-excel p {
+    color: white;
+    margin: 80px 50px;
+    text-align: center;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    margin: 10px;
+    max-width: 450px;
+}
+
+.blog-card img {
+    width: auto;
+    height: 200px;
+}
+
+.blog-card h3,
+.blog-card p {
+    margin: 2px auto;
+    text-align: center;
+}
+
+.blog-card button {
+    width: auto;
+    margin: 20px;
+    background-color: #227447;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
