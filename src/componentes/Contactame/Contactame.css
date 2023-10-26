@@ -1,0 +1,70 @@
+.contactame {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(24, 24, 24);
+}
+
+.formulario {
+    flex: 1; 
+    padding: 20px;
+}
+
+.formulario h2 {
+    text-align: center;
+}
+
+.contactame img {
+    height: 450px;
+    max-width: 100%;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-form input {
+    margin: 5px 0px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.contact-form input::placeholder {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    margin: 10px 0px;
+    height: 140px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.contact-form textarea::placeholder {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: white;
+    height: 40px;
+    font-size: 20px;
+    color: black;
+}
