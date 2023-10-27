@@ -10,11 +10,15 @@ const NavBar = () => {
 
     const closeMenu = () => setClick(false)
 
-  return (
+    return (
         <div className='header'>
             <nav className='navbar'>
                 <Link to="/" className='logo'>
                     <img src={logo} alt='logo' />
+                    <div className='logo-texto'>
+                        <h2>excel.arq</h2>
+                        <h3>Excel aplicado a la Arquitectura</h3>
+                    </div>
                 </Link>
 
                 <ul className={click ? "nav-menu active" : "nav-menu"} style={{ listStyle: 'none' }}>
@@ -33,7 +37,7 @@ const NavBar = () => {
                 </ul>
             </nav>
         </div>
-  )
+    )
 }
 
 export default NavBar

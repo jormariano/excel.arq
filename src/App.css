@@ -22,4 +22,6 @@ body {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  height: 740px;
+  width: 100%;
 }

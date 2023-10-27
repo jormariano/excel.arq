@@ -1,21 +1,17 @@
 .contactame {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     background-color: rgb(24, 24, 24);
+    height: 600px;
 }
 
-.formulario {
+.container-form {
     flex: 1; 
     padding: 20px;
 }
 
-.formulario h2 {
+.container-form h2 {
     text-align: center;
-}
-
-.contactame img {
-    height: 450px;
-    max-width: 100%;
 }
 
 .contact-form {
@@ -67,4 +63,14 @@
     height: 40px;
     font-size: 20px;
     color: black;
+}
+
+.container-img {
+    width: 50%; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: 100%;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
 }

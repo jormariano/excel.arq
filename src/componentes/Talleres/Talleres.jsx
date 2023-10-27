@@ -19,15 +19,15 @@ const Talleres = () => {
             <div className='blog-container'>
                 {talleres.map((taller, index) => (
                     <div key={index} className='blog-card'>
-                        <div className="talleres-img">
-                            <img src={taller.img} alt={taller.nombre} />
-                        </div>
                         <div className="talleres-texto">
-                            <h3>{taller.nombre}</h3>
+                            <h2>{taller.nombre}</h2>
                             <h3>{taller.fecha}</h3>
                             <p>{taller.descripcion}</p>
-                            <h3>Quedan: {taller.stock} cupos</h3>
+                            <h2>Quedan: {taller.stock} cupos</h2>
                             <button>Inscripción</button>
+                        </div>
+                        <div className="talleres-img">
+                            <img src={taller.img} alt={taller.nombre} />
                         </div>
                     </div>
                 ))}
