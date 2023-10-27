@@ -9,7 +9,7 @@ import Footer from './componentes/Footer/Footer'
 const App = () => {
   return (
     <>
-      <div className='background-img'>
+      <div id="/" className='background-img'>
         <NavBar />
         <Inicio />
       </div>

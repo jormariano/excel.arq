@@ -78,12 +78,18 @@
   text-align: center;
 }
 
+.talleres-texto h2 {
+  margin: 40px;
+}
+
 .talleres-texto h3 {
+  margin: 40px;
   font-size: 20px;
   color: #227447;
 }
 
 .talleres-texto p {
+  margin: 40px;
   font-size: 16px;
 }
 

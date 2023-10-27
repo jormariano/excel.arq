@@ -2,7 +2,7 @@
     background-color: rgb(24, 24, 24);
     display: flex;
     align-items: center;
-    height: 600px;
+    height: 700px;
 }
   
 .container-img {
@@ -20,6 +20,16 @@
     text-align: center;
 }
   
-.detrasDe h2, .detrasDe h3, .detrasDe p {
-    margin: 0;
+.detrasDe h2, .detrasDe h3 {
+    margin: 40px;
+}
+
+.detrasDe h3 {
+    color: #227447;
+}
+
+.detrasDe p {
+    margin: 40px 100px 0px 100px;
+    text-align: justify;
+    line-height: 1.8;
 }
