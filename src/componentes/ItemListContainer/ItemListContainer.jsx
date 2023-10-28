@@ -1,8 +1,22 @@
-import React from 'react'
+import { useState, useEffect } from "react"
+import { getTalleres } from "../../asyncmock"
+import ItemList from "../ItemList/ItemList"
 
 const ItemListContainer = () => {
+
+  const [talleres, setTalleres] = useState([])
+
+  useEffect(() => {
+
+    getTalleres()
+      .then(respuesta => setTalleres(respuesta))
+
+  }, [])
+
   return (
-    <h2>ItemListContainer</h2>
+    <>
+      <ItemList talleres={talleres} />
+    </>
   )
 }
 

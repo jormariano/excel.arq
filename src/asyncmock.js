@@ -3,3 +3,11 @@ export const talleres = [
     { id: 2, nombre: "Taller intermedio: PLANIFICACIÓN DE OBRA", fecha: "Comienza en Marzo 2024", descripcion: "El Taller se encuentra en construcción.", stock: 5, img: "../img/taller-intermedio-planificacion.jpg" },
     { id: 3, nombre: "Taller avanzado: EVALUACIÓN Y CONTROL DE OBRA", fecha: "Comienza en Julio 2024", descripcion: "El Taller se encuentra en construcción.", stock: 5, img: "../img/taller-avanzado-evaluacion.jpg" }
 ]
+
+export const getTalleres = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(talleres)
+        }, 1000)
+    })
+}
