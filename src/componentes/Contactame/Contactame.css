@@ -60,8 +60,9 @@
 
 .contact-form button {
     background-color: white;
-    height: 40px;
-    font-size: 20px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: bold;
     color: black;
 }
 

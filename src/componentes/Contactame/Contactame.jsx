@@ -72,10 +72,10 @@ const Contactame = () => {
 
                 <form onSubmit={enviarConsulta} className="contact-form">
 
-                    <input type="text" id="nombre" placeholder="*Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}></input>
-                    <input type="email" id="email" placeholder="*Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    <input type="text" id="nombre" placeholder="Nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}></input>
+                    <input type="email" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     <input type="text" id="whatsapp" placeholder="WhatsApp" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)}></input>
-                    <textarea placeholder="*Escribe tu mensaje aqui..." value={consulta} onChange={(e) => setConsulta(e.target.value)}></textarea>
+                    <textarea placeholder="Escribe tu mensaje aqui..." value={consulta} onChange={(e) => setConsulta(e.target.value)}></textarea>
                     <button type="submit">Enviar consulta</button>
                 </form>
             </div>

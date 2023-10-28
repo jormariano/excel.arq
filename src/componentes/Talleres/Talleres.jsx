@@ -22,7 +22,9 @@ const Talleres = () => {
                         <div className="talleres-texto">
                             <h2>{taller.nombre}</h2>
                             <h3>{taller.fecha}</h3>
-                            <p>{taller.descripcion}</p>
+                            <p><strong>{taller.descripcion}</strong></p>
+                            <p>{taller.descripcion1}</p>
+                            <p>{taller.descripcion2}</p>
                             <h2>Quedan: {taller.stock} cupos</h2>
                             <button>Inscripción</button>
                         </div>

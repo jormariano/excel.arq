@@ -16,20 +16,25 @@
 }
   
 .container-texto {
+    margin: 20px 120px 10px 120px;
     flex: 1;
-    text-align: center;
+    text-align: justify;
 }
   
-.detrasDe h2, .detrasDe h3 {
-    margin: 40px;
+.container-texto h2 {
+    font-size: 50px;
+    font-weight: bold;
 }
 
-.detrasDe h3 {
+.container-texto h3 {
     color: #227447;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
-.detrasDe p {
-    margin: 40px 100px 0px 100px;
+.container-texto p {
+    margin-top: 20px;
     text-align: justify;
     line-height: 1.8;
 }

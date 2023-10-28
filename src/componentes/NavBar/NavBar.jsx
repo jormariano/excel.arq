@@ -1,4 +1,5 @@
 import './NavBar.css'
+import CartWidget from '../CartWidget/CartWidget'
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 
@@ -11,32 +12,36 @@ const NavBar = () => {
     const closeMenu = () => setClick(false)
 
     return (
-        <div id="/" className='header'>
-            <nav className='navbar'>
-                <Link to="/" className='logo'>
-                    <img src={logo} alt='logo' />
-                    <div className='logo-texto'>
-                        <h2>excel.arq</h2>
-                        <h3>Excel aplicado a la Arquitectura</h3>
-                    </div>
-                </Link>
+        <header id="/">
 
-                <ul className={click ? "nav-menu active" : "nav-menu"} style={{ listStyle: 'none' }}>
+            <Link to="/" className='logo'>
+                <img src={logo} alt='logo' />
+                <div className='logo-texto'>
+                    <h2>excel.arq</h2>
+                    <h3>Excel aplicado a la Arquitectura</h3>
+                </div>
+            </Link>
+            <div className="nav-cart-container">
+            <nav>
+                <ul>
                     <li className='nav-item'>
                         <Link to="/" spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>Inicio</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="talleres" spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>Talleres</Link>
+                        <Link to="talleres" spy={true} smooth={true} offset={-134} duration={500} onClick={closeMenu}>Talleres</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="detrasde" spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>Detras de...</Link>
+                        <Link to="detrasde" spy={true} smooth={true} offset={-50} duration={500} onClick={closeMenu}>Detras de...</Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to="contactame" spy={true} smooth={true} offset={0} duration={500} onClick={closeMenu}>Contactame</Link>
+                        <Link to="contactame" spy={true} smooth={true} offset={-90} duration={500} onClick={closeMenu}>Contactame</Link>
                     </li>
                 </ul>
             </nav>
-        </div>
+                <CartWidget />
+            </div>
+
+        </header>
     )
 }
 
