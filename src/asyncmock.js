@@ -20,3 +20,5 @@ export const getUnTaller = (id) => {
         }, 1000)
     })
 }
+
+// del commit itemDetail faltaria git push para subirlo a GitHub
