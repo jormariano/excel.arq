@@ -1,14 +1,13 @@
-import './Item.css'
+import './ItemDetail.css'
 
-const Item = ({ id, nombre, fecha, precio, moneda, descripcion, descripcion1, descripcion2, stock, img }) => {
-    return (
-        <div className='blog-card'>
+const ItemDetail = ({id, nombre, fecha, descripcion, precio, moneda, stock, img}) => {
+  return (
+    <div className='blog-card'>
             <div className="talleres-texto">
+                <h2>ItemDetail</h2>
                 <h2>{nombre}</h2>
                 <h3>{fecha}</h3>
                 <p><strong>{descripcion}</strong></p>
-                <p>{descripcion1}</p>
-                <p>{descripcion2}</p>
                 <h2>Quedan: {stock} cupos</h2>
                 <h3>Precio: {precio} {moneda}</h3>
                 <button>Inscripción</button>
@@ -17,7 +16,7 @@ const Item = ({ id, nombre, fecha, precio, moneda, descripcion, descripcion1, de
                 <img src={img} alt={nombre} />
             </div>
         </div>
-    )
+  )
 }
 
-export default Item
+export default ItemDetail

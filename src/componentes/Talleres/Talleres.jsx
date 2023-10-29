@@ -1,5 +1,4 @@
 import './Talleres.css'
-import { talleres } from '../../asyncmock'
 
 const Talleres = () => {
 
