@@ -17,7 +17,6 @@ const App = () => {
       </div>
       <Talleres />
       <ItemListContainer />
-      <ItemDetailContainer />
       <DetrasDe />
       <Contactame />
       <Footer />

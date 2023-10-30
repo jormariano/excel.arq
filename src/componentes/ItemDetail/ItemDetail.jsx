@@ -1,5 +1,6 @@
 import './ItemDetail.css'
 
+
 const ItemDetail = ({id, nombre, fecha, descripcion, precio, moneda, stock, img}) => {
   return (
     <div className='blog-card'>
