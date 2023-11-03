@@ -7,19 +7,30 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import DetrasDe from './componentes/DetrasDe/DetrasDe'
 import Contactame from './componentes/Contactame/Contactame'
 import Footer from './componentes/Footer/Footer'
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 
 const App = () => {
   return (
     <>
-      <div id="/" className='background-img'>
-        <NavBar />
-        <Inicio />
-      </div>
-      <Talleres />
-      <ItemListContainer />
-      <DetrasDe />
-      <Contactame />
-      <Footer />
+      <BrowserRouter>
+        <div id="/" className='background-img'>
+          <NavBar />
+          <Inicio />
+        </div>
+        <Routes>
+          <Route path="/" element={
+            <div>
+              <Talleres />
+              <ItemListContainer />
+              <DetrasDe />
+              <Contactame />
+            </div>
+          } />
+          <Route path="/cart" element={<ItemDetailContainer />} />
+          <Route path="*" element={<div className='en-construccion'><h2>Este sitio no existe. Vuelve al</h2> <Link to='/'><h2>Inicio</h2></Link></div>} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

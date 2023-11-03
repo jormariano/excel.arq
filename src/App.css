@@ -25,3 +25,14 @@ body {
   height: 740px;
   width: 100%;
 }
+
+.en-construccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px;
+}
+
+.en-construccion a {
+  margin: 0px 5px;
+}

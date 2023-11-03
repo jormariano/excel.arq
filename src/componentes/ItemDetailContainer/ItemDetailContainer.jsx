@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react"
 import { getUnTaller } from "../../asyncmock"
 import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
 
     const [unTaller, setUnTaller] = useState(null)
 
+    const { idItem } = useParams();
+
     useEffect(() => {
-        getUnTaller(2)
+        getUnTaller(idItem)
             .then(res => setUnTaller(res))
-    }, [])
+    }, [idItem])
 
     return (
         <>

@@ -1,19 +1,19 @@
 import './ItemDetail.css'
 
-
-const ItemDetail = ({id, nombre, fecha, descripcion, precio, moneda, stock, img}) => {
+const ItemDetail = ({id, nivel, nombre, fecha, descripcion, descripcion1, descripcion2, precio, moneda, stock, img}) => {
   return (
-    <div className='blog-card'>
-            <div className="talleres-texto">
+    <div className='item-detail-card'>
+            <div className="item-detail">
                 <h2>ItemDetail</h2>
-                <h2>{nombre}</h2>
-                <h3>{fecha}</h3>
+                <h2 style={{ fontSize: '26px', marginBottom: '5px' }}>{nivel}</h2>
+                <h2 style={{ fontSize: '26px' }}>{nombre}</h2>
+                <h3 style={{ margin: '30px', fontSize: '24px', color: '#227447' }}>{fecha}</h3>
                 <p><strong>{descripcion}</strong></p>
-                <h2>Quedan: {stock} cupos</h2>
+                <p>{descripcion1}</p>
+                <p>{descripcion2}</p>
                 <h3>Precio: {precio} {moneda}</h3>
-                <button>Inscripción</button>
             </div>
-            <div className="talleres-img">
+            <div className="item-detail-img">
                 <img src={img} alt={nombre} />
             </div>
         </div>
