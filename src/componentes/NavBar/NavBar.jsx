@@ -32,9 +32,9 @@ const NavBar = () => {
                             <div className="dropdown">
                                 <Link to="talleres" spy={true} smooth={true} offset={-134} duration={500} onClick={closeMenu}>Talleres</Link>
                                 <div className="dropdown-content">
-                                    <Link to="/item/1">Basico</Link>
-                                    <Link to="/item/2">Intermedio</Link>
-                                    <Link to="/item/3">Avanzado</Link>
+                                    <Link to="1" spy={true} smooth={true} offset={-90} duration={500} onClick={closeMenu}>Básico</Link>
+                                    <Link to="2" spy={true} smooth={true} offset={-90} duration={500} onClick={closeMenu}>Intermedio</Link>
+                                    <Link to="3" spy={true} smooth={true} offset={-90} duration={500} onClick={closeMenu}>Avanzado</Link>
                                 </div>
                             </div>
                         </li>

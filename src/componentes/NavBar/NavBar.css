@@ -9,7 +9,6 @@ header {
     left: 0;
     z-index: 1;
     transition: .3s ease-in;
-    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -57,17 +56,19 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 95px;
     z-index: 10;
+    left: 970px;
+    text-align: center;
 }
   
 .dropdown-content a {
-    padding: 12px 16px;
+    font-size: 16px;
+    padding: 6px 6px;
     text-decoration: none;
     display: block;
-    color: #333;
+    color: #ffffff;
 }
   
 .dropdown-content a:hover {

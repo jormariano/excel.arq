@@ -13,7 +13,7 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
     }
 
     return (
-        <div className='blog-card'>
+        <div id={id} className='blog-card'>
             <div className="talleres-texto">
                 <h2 style={{ fontSize: '26px', marginBottom: '5px' }}>{nivel}</h2>
                 <h2 style={{ fontSize: '26px' }}>{nombre}</h2>

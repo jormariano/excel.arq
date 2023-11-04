@@ -16,16 +16,6 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.background-img {
-  background-image: url("../img/fondo-inicio.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  height: 740px;
-  width: 100%;
-}
-
 .en-construccion {
   display: flex;
   flex-direction: row;

@@ -13,13 +13,13 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div id="/" className='background-img'>
+        <div id='/'>
           <NavBar />
-          <Inicio />
         </div>
         <Routes>
           <Route path="/" element={
-            <div>
+            <div >
+              <Inicio />
               <Talleres />
               <ItemListContainer />
               <DetrasDe />
