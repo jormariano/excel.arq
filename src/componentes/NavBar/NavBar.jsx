@@ -14,7 +14,6 @@ const NavBar = () => {
 
     return (
         <header id="/">
-
             <Link to="/" className='logo'>
                 <img src={logo} alt='logo' />
                 <div className='logo-texto'>

@@ -1,15 +1,22 @@
 import './Item.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll'
 import ItemCount from '../ItemCount/ItemCount'
+import { CarritoContext } from '../../Context/CarritoContext'
+import { useContext } from 'react'
 
 const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripcion1, descripcion2, stock, img }) => {
 
     const [agregarCantidad, setAgregarCantidad] = useState(0)
 
+    const {agregarProducto} = useContext(CarritoContext);
+
     const manejadorCantidad = (cantidad) => {
         setAgregarCantidad(cantidad)
-        console.log("Productos agregados: " + cantidad)
+       // console.log("Productos agregados: " + cantidad)
+
+       const item = {id, nombre, precio};
+       agregarProducto(item, cantidad);
     }
 
     return (
@@ -25,7 +32,7 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
                 <h3>Precio: {precio} {moneda}</h3>
                 <div>
                     {
-                        agregarCantidad > 0 ? (<Link to="/cart"> Terminar compra </Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+                        agregarCantidad > 0 ? (<Link to="cart"> Terminar compra </Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
                     }
                 </div>
             </div>

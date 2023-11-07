@@ -1,5 +1,6 @@
 import './App.css'
 import NavBar from './componentes/NavBar/NavBar'
+import Cart from './componentes/Cart/Cart'
 import Inicio from './componentes/Inicio/Inicio'
 import Talleres from './componentes/Talleres/Talleres'
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer'
@@ -7,30 +8,23 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import DetrasDe from './componentes/DetrasDe/DetrasDe'
 import Contactame from './componentes/Contactame/Contactame'
 import Footer from './componentes/Footer/Footer'
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { CarritoProvider } from './Context/CarritoContext'
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <CarritoProvider>
         <div id='/'>
           <NavBar />
         </div>
-        <Routes>
-          <Route path="/" element={
-            <div >
-              <Inicio />
-              <Talleres />
-              <ItemListContainer />
-              <DetrasDe />
-              <Contactame />
-            </div>
-          } />
-          <Route path="/cart" element={<ItemDetailContainer />} />
-          <Route path="*" element={<div className='en-construccion'><h2>Este sitio no existe. Vuelve al</h2> <Link to='/'><h2>Inicio</h2></Link></div>} />
-        </Routes>
+        <Inicio />
+        <Talleres />
+        <ItemListContainer />
+        <DetrasDe />
+        <Contactame />
+        <Cart />
         <Footer />
-      </BrowserRouter>
+      </CarritoProvider>
     </>
   )
 }

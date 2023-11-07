@@ -1,6 +1,8 @@
 import './ItemDetail.css'
 
+
 const ItemDetail = ({ id, nivel, nombre, fecha, descripcion, descripcion1, descripcion2, precio, moneda, stock, img }) => {
+
   return (
     <div className='background-img'>
       <div className='item-detail-card'>
