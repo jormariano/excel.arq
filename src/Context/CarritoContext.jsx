@@ -28,7 +28,7 @@ export const CarritoProvider = ({children}) => {
         } else {
             const carritoActualizado = carrito.map( prod => {
                 if(prod.item.id === item.id) {
-                    return {...prod, cantidad:prod.cantidad + cantidad};
+                    return { ...prod, cantidad:prod.cantidad + cantidad};
                 } else {
                     return prod;
                 }

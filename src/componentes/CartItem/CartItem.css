@@ -1,0 +1,19 @@
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.cart-item h3,
+p,
+button {
+    margin: 5px;
+}
+
+.cart-item button {
+    width: 140px;
+    height: 32px;
+    font-size: 14px;
+}

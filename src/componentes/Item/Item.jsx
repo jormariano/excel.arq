@@ -13,9 +13,8 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
 
     const manejadorCantidad = (cantidad) => {
         setAgregarCantidad(cantidad)
-       // console.log("Productos agregados: " + cantidad)
 
-       const item = {id, nombre, precio};
+       const item = {id, nivel, nombre, precio};
        agregarProducto(item, cantidad);
     }
 

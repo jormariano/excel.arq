@@ -1,0 +1,62 @@
+.overlay {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.847);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emptyCartMessage {
+    text-align: center;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+}
+
+.emptyCartMessage h2 {
+    margin: 30px;
+    cursor: pointer;
+}
+
+.cart {
+    position: fixed;
+    top: 50%; /* Centrar verticalmente en el 50% de la pantalla */
+    left: 50%; /* Centrar horizontalmente en el 50% de la pantalla */
+    transform: translate(-50%, -50%); /* Ajustar el centro del modal */
+    width: 500px; /* Ajusta el ancho del modal según tus necesidades */
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegura que esté encima de otros elementos en la página */
+    padding: 10px;
+    color:rgba(0, 0, 0, 0.5)
+}
+
+.cart-button {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-button button {
+    margin: 10px 5px;
+    width: 140px;
+    height: 32px;
+    font-size: 14px;
+    text-align: center;
+}
