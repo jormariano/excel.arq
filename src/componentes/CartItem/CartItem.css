@@ -4,6 +4,7 @@
     font-weight: bold;
     color: black;
     text-align: center;
+    align-items: center;
 }
 
 .cart-item h3,

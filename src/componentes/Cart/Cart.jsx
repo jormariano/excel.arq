@@ -12,7 +12,6 @@ const Cart = ({ open, onClose }) => {
     if (!open) return null;
 
 
-
     return (
         <div className="overlay" onClick={onClose}>
             <div onClick={(e) => {

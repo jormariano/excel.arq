@@ -33,7 +33,6 @@ const Inicio = () => {
           Swal.fire('Error', 'Ocurrió un error al registrarte. Intente nuevamente.', 'error');
         });
     } else if (dismiss === Swal.DismissReason.cancel) {
-      // El usuario hizo clic en el botón "Cancelar"
       Swal.fire('Operación cancelada', '', 'info');
     }
   }

@@ -6,7 +6,6 @@ const Talleres = () => {
 
     return (
         <div id="talleres" className="taller-excel">
-            <div className="filtro-sepia"></div>
             <img src={tallerFondo} alt="Imagen Taller" className="taller-img" />
             <div className="taller-texto">
                 <h2>Taller excel.arq</h2>

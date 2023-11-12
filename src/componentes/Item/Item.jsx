@@ -4,18 +4,21 @@ import { Link } from 'react-scroll'
 import ItemCount from '../ItemCount/ItemCount'
 import { CarritoContext } from '../../Context/CarritoContext'
 import { useContext } from 'react'
+import Cart from '../Cart/Cart'
 
 const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripcion1, descripcion2, stock, img }) => {
 
     const [agregarCantidad, setAgregarCantidad] = useState(0)
 
-    const {agregarProducto} = useContext(CarritoContext);
+    const { agregarProducto } = useContext(CarritoContext);
+
+    const [openModal, setOpenModal] = useState(false);
 
     const manejadorCantidad = (cantidad) => {
         setAgregarCantidad(cantidad)
 
-       const item = {id, nivel, nombre, precio};
-       agregarProducto(item, cantidad);
+        const item = { id, nivel, nombre, precio };
+        agregarProducto(item, cantidad);
     }
 
     return (
@@ -27,11 +30,13 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
                 <p><strong>{descripcion}</strong></p>
                 <p>{descripcion1}</p>
                 <p>{descripcion2}</p>
-                <h2 style={{ margin: '20px'}}>Quedan: {stock} cupos</h2>
+                <h2 style={{ margin: '20px' }}>Quedan: {stock} cupos</h2>
                 <h3>Precio: {precio} {moneda}</h3>
                 <div>
                     {
-                        agregarCantidad > 0 ? (<Link to="cart"> Terminar compra </Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
+                        agregarCantidad > 0 ? (<button className='button-cart-item' onClick={() => setOpenModal(true)}>Terminar compra
+                            <Cart open={openModal} onClose={() => setOpenModal(false)} /> </button>
+                        ) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
                     }
                 </div>
             </div>

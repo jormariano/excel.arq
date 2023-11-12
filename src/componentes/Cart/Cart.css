@@ -36,16 +36,22 @@
 
 .cart {
     position: fixed;
-    top: 50%; /* Centrar verticalmente en el 50% de la pantalla */
-    left: 50%; /* Centrar horizontalmente en el 50% de la pantalla */
-    transform: translate(-50%, -50%); /* Ajustar el centro del modal */
-    width: 500px; /* Ajusta el ancho del modal según tus necesidades */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 500px; 
     background: white;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Asegura que esté encima de otros elementos en la página */
+    z-index: 1000; 
     padding: 10px;
     color:rgba(0, 0, 0, 0.5)
+}
+
+.cart h3 {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black;
 }
 
 .cart-button {
