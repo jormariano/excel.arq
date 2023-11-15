@@ -17,7 +17,7 @@ const Cart = ({ open, onClose }) => {
             <div onClick={(e) => {
                 e.stopPropagation();
             }} ></div>
-            <p className="closeButton" onClick={onClose}> X </p>
+            <h4 className="closeButton" onClick={() => { console.log('Cerrando modal'); onClose(); }}> X </h4>
             {cantidadTotal === 0 ? (
                 <div className="emptyCartMessage">
                     <h3>No hay productos en el carrito.</h3>
@@ -25,7 +25,7 @@ const Cart = ({ open, onClose }) => {
                 </div>
             ) : (
                 <div className='cart'>
-                    {carrito.map(producto => <CartItem key={producto.id} {...producto} />)}
+                    {carrito.map((producto, index) => <CartItem key={index} {...producto} />)}
                     <h3>Total: {total}</h3>
                     <h3>Cantidad total: {cantidadTotal}</h3>
                     <div className='cart-button'>

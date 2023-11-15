@@ -12,9 +12,6 @@ export const CarritoProvider = ({children}) => {
     const [total, setTotal] = useState(0);
     const [cantidadTotal, setCantidadTotal] = useState(0);
 
-    //Provisoriamente verifico por consola: 
-    console.log(carrito);
-
     //Función para agregar productos al carrito evitando duplicados: 
 
     const agregarProducto = (item, cantidad) => {

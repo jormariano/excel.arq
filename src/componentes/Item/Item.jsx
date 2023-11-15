@@ -1,6 +1,5 @@
 import './Item.css'
 import { useState } from 'react'
-import { Link } from 'react-scroll'
 import ItemCount from '../ItemCount/ItemCount'
 import { CarritoContext } from '../../Context/CarritoContext'
 import { useContext } from 'react'
@@ -34,8 +33,10 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
                 <h3>Precio: {precio} {moneda}</h3>
                 <div>
                     {
-                        agregarCantidad > 0 ? (<button className='button-cart-item' onClick={() => setOpenModal(true)}>Terminar compra
-                            <Cart open={openModal} onClose={() => setOpenModal(false)} /> </button>
+                        agregarCantidad > 0 ? (<div className='cart-buy-finish' onClick={() => setOpenModal(true)}> Ver carrito
+                              <Cart
+                open={openModal}
+                onClose={() => setOpenModal(false)} /> </div>
                         ) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad} />)
                     }
                 </div>
