@@ -1,19 +1,26 @@
 import './Cart.css'
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CarritoContext } from "../../Context/CarritoContext"
 import { Link } from 'react-scroll'
 import CartItem from "../CartItem/CartItem"
+import Checkout from '../Checkout/Checkout'
 
 
 const Cart = ({ open, onClose }) => {
 
     const { carrito, vaciarCarrito, total, cantidadTotal } = useContext(CarritoContext);
 
+    const [showCheckout, setShowCheckout] = useState(false);
+
     if (!open) return null;
 
     const handleModalClick = (e) => {
         e.stopPropagation();
     };
+
+    const mostrarCheckout = () => {
+        setShowCheckout(true);
+      };
 
     return (
         <div className="overlay" onClick={handleModalClick}>
@@ -35,14 +42,16 @@ const Cart = ({ open, onClose }) => {
                             </Link>
                         </h2>
                     </div>
-                ) : (
+                ) : showCheckout ? (
+                    <Checkout onClose={onClose} />
+                  ) : (
                     <div className='cart'>
                         {carrito.map((producto, index) => <CartItem key={index} {...producto} />)}
                         <h3>Total: {total}</h3>
                         <h3>Cantidad total: {cantidadTotal}</h3>
                         <div className='cart-button'>
                             <button onClick={() => vaciarCarrito()}> Vaciar carrito </button>
-                            <button onClick={() => { /* Agregar la lógica de finalizar compra */ }}> Finalizar compra </button>
+                            <button onClick={mostrarCheckout}> Finalizar compra </button>
                         </div>
                     </div>
                 )}
