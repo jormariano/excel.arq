@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC09cIRmB6kObW0vPqv9UGVfFZN2FrnKYI",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "excel-arq.firebaseapp.com",
   projectId: "excel-arq",
   storageBucket: "excel-arq.appspot.com",

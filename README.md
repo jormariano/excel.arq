@@ -7,6 +7,11 @@ Ecommerce creado con React. La aplicación permite adquirir tres niveles de tall
 - React Scroll
 - Firebase
 
+## Librerías utilizadas
+
+- SweetAlert
+- EmailJS
+
 ## Funcionalidades
 - Ver una lista de productos disponibles
 - Agregar productos al carrito de compras
