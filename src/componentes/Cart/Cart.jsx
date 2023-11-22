@@ -20,7 +20,7 @@ const Cart = ({ open, onClose }) => {
 
     const mostrarCheckout = () => {
         setShowCheckout(true);
-      };
+    };
 
     return (
         <div className="overlay" onClick={handleModalClick}>

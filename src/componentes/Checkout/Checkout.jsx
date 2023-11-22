@@ -1,9 +1,10 @@
+import './Checkout.css'
 import { useState, useContext } from "react"
 import { CarritoContext } from "../../Context/CarritoContext"
 import { db } from "../../services/config"
-import { collection, addDoc } from "firebase/firestore"
+import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore"
 
-const Checkout = ({onClose}) => {
+const Checkout = ({ onClose }) => {
 
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
@@ -41,32 +42,53 @@ const Checkout = ({onClose}) => {
             email
         }
 
-        addDoc(collection(db, "ordenes"), orden)
-            .then(docRef => {
-                setOrdenId(docRef.id);
-                vaciarCarrito()
-            })
-            .catch(error => {
-                console.log("Error al generar la orden", error)
-                setError("Error al cargar la orden, intente de nuevo")
-            })
+        Promise.all(
+            orden.items.map(async (productoOrden) => {
+                const productoRef = doc(db, "talleres", productoOrden.id)
 
+                const productoDoc = await getDoc(productoRef)
+
+                const stockActual = productoDoc.data().stock
+
+                await updateDoc(productoRef, {
+                    stock: stockActual - productoOrden.cantidad,
+                })
+            })
+        )
+            .then(() => {
+                addDoc(collection(db, "ordenes"), orden)
+                    .then((docRef) => {
+                        setOrdenId(docRef.id)
+                        vaciarCarrito()
+                    })
+                    .catch((error) => {
+                        console.log("Error al crear la orden", error)
+                        setError("Error al crear la orden, vuelva a intentarlo")
+                    })
+            })
+            .catch((error) => {
+                console.log("Error, no se puede actualizar el stock", error)
+                setEmailConfirmacion("No se puede actualizar el stock, intente de nuevo")
+            })
     }
 
     return (
-        <div>
-            <h2>Check out</h2>
-            <form onSubmit={handleForm}>
+        <div className='checkout'>
+            <h2> Estas por acceder a:</h2>
+            <form className='checkout-form' onSubmit={handleForm}>
                 {
                     carrito.map(producto => (
-                        <div key={producto.item.id}>
-                            <p>{producto.item.nombre} x {producto.cantidad} </p>
-                            <p>{producto.item.precio}</p>
+                        <div className='checkout-productos' key={producto.item.id}>
+                            <p>{producto.item.nivel} {producto.item.nombre} x {producto.cantidad} </p>
+                            <p>Precio: {producto.item.precio} {producto.item.moneda}</p>
                             < hr />
                         </div>
                     ))
                 }
-                <div className="form-checkout">
+                <h3><strong>Cantidad total: {cantidadTotal} talleres</strong></h3>
+                <hr />
+
+                <div className="checkout-formulario">
 
                     <label htmlFor="nombre"> Nombre: </label>
                     <input type="text" id="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} />
@@ -77,7 +99,7 @@ const Checkout = ({onClose}) => {
                     <label htmlFor="email"> Email: </label>
                     <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-                    <label htmlFor="emailConfirmacion">Email confirmacion: </label>
+                    <label htmlFor="emailConfirmacion">Email de confirmación: </label>
                     <input type="email" id="emailConfirmacion" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
 
                 </div>
@@ -85,13 +107,13 @@ const Checkout = ({onClose}) => {
                 {
                     error && <p style={{ color: "red" }}>{error}</p>
                 }
-
+                <button onClick={() => vaciarCarrito()}> Vaciar carrito </button>
                 <button type="submit">Finalizar compra</button>
             </form>
 
             {
                 ordenId && (
-                    <strong>Gracias por su compra! Su numero de orden es: {ordenId} </strong>
+                    <strong>Gracias por su compra! Su número de orden es: {ordenId} </strong>
                 )
             }
 

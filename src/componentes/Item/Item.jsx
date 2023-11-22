@@ -1,8 +1,7 @@
 import './Item.css'
-import { useState } from 'react'
+import { useContext, useState } from "react"
 import ItemCount from '../ItemCount/ItemCount'
 import { CarritoContext } from '../../Context/CarritoContext'
-import { useContext } from 'react'
 import Cart from '../Cart/Cart'
 
 const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripcion1, descripcion2, stock, img }) => {
@@ -16,7 +15,7 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
     const manejadorCantidad = (cantidad) => {
         setAgregarCantidad(cantidad)
 
-        const item = { id, nivel, nombre, precio };
+        const item = { id, nivel, nombre, precio, moneda };
         agregarProducto(item, cantidad);
     }
 

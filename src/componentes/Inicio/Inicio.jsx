@@ -42,7 +42,7 @@ const Inicio = () => {
       <div className="presentacion">
         <h2>excel.arq</h2>
         <p>Todo sobre excel aplicado a tus proyectos de Arquitectura</p>
-        <h3>PRESENTACIÓN DE EXCEL.ARQ</h3>
+        <h3>CHARLA DE PRESENTACIÓN DE EXCEL.ARQ</h3>
         <h3>LUNES 1 DE DICIEMBRE A LAS 18hs.</h3>
         <button onClick={mostrarSweetAlert}>REGISTRATE GRATIS</button>
       </div>
