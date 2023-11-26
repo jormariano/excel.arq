@@ -22,14 +22,14 @@ const Item = ({ id, nivel, nombre, fecha, precio, moneda, descripcion, descripci
     return (
         <div id={id} className='blog-card'>
             <div className="talleres-texto">
-                <h2 style={{ fontSize: '26px', marginBottom: '5px' }}>{nivel}</h2>
-                <h2 style={{ fontSize: '26px' }}>{nombre}</h2>
-                <h3 style={{ margin: '30px', fontSize: '24px', color: '#227447' }}>{fecha}</h3>
+                <h2>{nivel}</h2>
+                <h2>{nombre}</h2>
+                <h3>{fecha}</h3>
                 <p><strong>{descripcion}</strong></p>
                 <p>{descripcion1}</p>
                 <p>{descripcion2}</p>
-                <h2 style={{ margin: '20px' }}>Quedan: {stock} cupos</h2>
-                <h3>Precio: {precio} {moneda}</h3>
+                <h3>Quedan: {stock} cupos</h3>
+                <h4>Precio: {precio} {moneda}</h4>
                 <div>
                     {
                         agregarCantidad > 0 ? (<div className='cart-buy-finish' onClick={() => setOpenModal(true)}> Ver carrito

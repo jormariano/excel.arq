@@ -24,7 +24,7 @@
 }
 
 .checkout-form h3 {
-    margin:20px;
+    margin: 20px;
 }
 
 .checkout-form button {
@@ -39,4 +39,16 @@
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width: 500px) {
+    
+    .modal-content {
+        margin-top: 20px;
+    }
+    
+    .checkout-form {
+       margin-top: 200px;
+       height: 700px;
+    }
 }

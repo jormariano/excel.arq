@@ -19,3 +19,9 @@
     font-size: 20px;
     text-align: end;
 }
+
+@media  screen and (max-width: 850px) {
+    .cart-widget {
+        margin: 0px 10px;
+    }
+}

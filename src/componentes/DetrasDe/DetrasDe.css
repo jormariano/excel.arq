@@ -38,3 +38,41 @@
     text-align: justify;
     line-height: 1.8;
 }
+
+@media screen and (max-width: 500px) {
+    .detrasDe {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 550px;
+    }
+
+    .container-img {
+        width: 100%;
+    }
+
+    .container-img img {
+        margin: 0px;
+        width: 400px;
+        height: 200px;
+    }
+
+    .container-texto {
+        margin: 5px 10px;
+    }
+
+    .container-texto h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container-texto h3 {
+        margin: 5px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    .container-texto p {
+        margin-top: 10px;
+        line-height: 1.2;
+    }
+}

@@ -5,7 +5,7 @@
     background-position: center;
     overflow: hidden;
     height: 740px;
-    width: 100%;
+    width: auto;
 }
 
 .presentacion {
@@ -55,4 +55,39 @@
 
 .sweet-registro {
     width: 600px;
+}
+
+@media screen and (max-width: 500px) {
+
+    .background-img {
+        height: 500px;
+    }
+
+    .presentacion {
+        margin: 100px auto auto auto;
+        padding: 20px;
+        height: 45vh;
+        width: 350px;
+    }
+
+    .presentacion h2 {
+        margin-top: 20px;
+        font-size: 40px;
+    }
+    
+    .presentacion p {
+        margin: 15px; 
+        font-size: 16px;
+    }
+    
+    .presentacion h3 {
+        margin: 15px 20px 0px 20px;
+        font-size: 20px;
+    }
+    
+    .presentacion button {
+        width: 200px;
+        margin: 20px 0px 10px 0px;
+        font-size: 14px; 
+    }
 }

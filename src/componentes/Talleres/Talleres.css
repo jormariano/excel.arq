@@ -44,3 +44,26 @@
   align-self: flex-end;
   line-height: 1.8;
 }
+
+@media screen and (max-width: 500px) {
+
+  .taller-img {
+    height: 220px;
+  }
+
+  .taller-texto h2 {
+    font-size: 20px;
+    margin: 5px auto;
+  }
+
+  .taller-texto h3 {
+    font-size: 16px;
+    margin: 5px;
+  }
+
+  .taller-texto p {
+    font-size: 12px;
+    margin: 5px;
+    line-height: 1.5;
+  }
+}

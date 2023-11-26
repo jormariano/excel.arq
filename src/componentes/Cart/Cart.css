@@ -37,16 +37,16 @@
 
 .cart {
     position: fixed;
-    top: 50%; 
-    left: 50%; 
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px; 
+    width: 500px;
     background: white;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; 
+    z-index: 1000;
     padding: 10px;
-    color:rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.5)
 }
 
 .cart h3 {
@@ -66,4 +66,24 @@
     height: 32px;
     font-size: 14px;
     text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .overlay {
+        top: 45%;
+        width: 360px;
+    }
+
+    .cart {
+        top: 60%;
+        width: 330px;
+    }
+
+    .cart h3 {
+        font-size: 16px;
+    }
+
+    .cart-button button {
+        width: 122px;
+    }
 }

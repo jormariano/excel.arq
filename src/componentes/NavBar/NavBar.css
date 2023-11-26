@@ -59,7 +59,7 @@ li {
     background-color: rgba(0, 0, 0, 0.7);
     width: 95px;
     z-index: 10;
-    left: 970px;
+    left: 982px;
     text-align: center;
 }
   
@@ -77,4 +77,35 @@ li {
   
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .logo {
+        margin: 0px 5px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 35px;
+        margin: 0px 5px;
+    }
+
+    .logo-texto h2 {
+        font-size: 16px;
+        margin: 0px 0px 6px 0px;
+    }
+
+    .logo-texto h3 {
+        font-size: 10px;
+    }
+
+    li {
+        font-size: 12px;
+        margin: 5px 5px;
+    }
+
+    .dropdown-content {
+        width: 100%;
+        left: 0;
+    }
 }

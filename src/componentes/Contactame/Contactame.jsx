@@ -79,7 +79,7 @@ const Contactame = () => {
                     <button type="submit">Enviar consulta</button>
                 </form>
             </div>
-            <div className="container-img">
+            <div className="container-img-form">
                 <img src={formularioContacto} alt="Formulario de contacto" />
             </div>
         </div>

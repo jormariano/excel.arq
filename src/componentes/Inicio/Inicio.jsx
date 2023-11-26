@@ -5,25 +5,25 @@ import emailjs from 'emailjs-com';
 const Inicio = () => {
 
   const mostrarSweetAlert = async () => {
-    const { value: email } = await Swal.fire({
+    const result = await Swal.fire({
       title: 'Registrate con tu correo electrónico',
       input: 'email',
-      inputPlaceholder: 'Ingrese tu correo electrónico',
+      inputPlaceholder: 'Ingrese su correo electrónico',
       showCancelButton: true,
       customClass: "sweet-registro",
       cancelButtonText: 'Cancelar',
       confirmButtonText: 'OK',
-      preConfirm: (email) => {
-        return email;
+      preConfirm: (email, dismiss) => {
+        return { email, dismiss };
       }
     });
 
-    if (email) {
+    if (result.value) {
       emailjs.init("gouPJROr_f-maiE0l");
 
       const templateParams = {
-        from_email: email,
-        from_name: email,
+        from_email: result.value.email,
+        from_name: result.value.email,
       };
 
       emailjs.send("service_5loet3x", "template_kaewdwn", templateParams)
@@ -32,8 +32,8 @@ const Inicio = () => {
         }, function (error) {
           Swal.fire('Error', 'Ocurrió un error al registrarte. Intente nuevamente.', 'error');
         });
-    } else if (dismiss === Swal.DismissReason.cancel) {
-      Swal.fire('Operación cancelada', '', 'info');
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+      Swal.fire('Registro cancelado', '', 'info');
     }
   }
 

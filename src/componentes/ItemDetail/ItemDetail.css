@@ -1,13 +1,3 @@
-.background-img {
-  background-image: url("../img/fondo-inicio.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  height: 740px;
-  width: 100%;
-}
-
 .item-detail-card {
     display: flex;
     align-items: center;
